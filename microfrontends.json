@@ -7,13 +7,13 @@
         "fallback": "glass-ui-framework.vercel.app"
       }
     },
-    "glass-ui-app1": {
+    "glass-ui-room-booking-board": {
       "routing": [
         {
           "group": "apps",
           "paths": [
-            "/apps/app1",
-            "/apps/app1/:path*"
+            "/apps/room-booking-board",
+            "/apps/room-booking-board/:path*"
           ]
         }
       ]
