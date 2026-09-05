@@ -1,4 +1,4 @@
-# glass-ui-app1
+# glass-ui-room-booking-board
 
 A standalone [Glass UI](https://github.com/overjetdental/glass-ui-framework) app —
 Overjet's internal apps portal. It is an ordinary Next.js app (App Router,
@@ -13,7 +13,7 @@ the shell's app registry. That means:
   `assetPrefix`, no `rewrites()`, no Vercel Microfrontends;
 - it must stay embeddable — no `X-Frame-Options`, no `frame-ancestors` CSP.
 
-The page at `/` renders "Hello World" plus a footer naming the deployment it is
+The page at `/` renders "Room booking board" plus a footer naming the deployment it is
 served from (`VERCEL_ENV`, `VERCEL_GIT_COMMIT_REF`, short `VERCEL_GIT_COMMIT_SHA`,
 each falling back to `local`), so a preview deployment is visibly different from
 production.
