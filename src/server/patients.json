@@ -1,0 +1,38 @@
+[
+  {
+    "id": "p1",
+    "name": "Sample Patient A",
+    "phone": "555-0100",
+    "provider": "Dr. Nguyen",
+    "nextVisit": "2026-09-14",
+    "status": "SCHEDULED",
+    "balance": 120
+  },
+  {
+    "id": "p2",
+    "name": "Sample Patient B",
+    "phone": "555-0101",
+    "provider": "Dr. Okafor",
+    "nextVisit": "2026-09-18",
+    "status": "CHECKED_IN",
+    "balance": 0
+  },
+  {
+    "id": "p3",
+    "name": "Sample Patient C",
+    "phone": "555-0102",
+    "provider": "Dr. Nguyen",
+    "nextVisit": "2026-10-02",
+    "status": "NO_SHOW",
+    "balance": 340.5
+  },
+  {
+    "id": "p4",
+    "name": "Sample Patient D",
+    "phone": "555-0103",
+    "provider": "Dr. Reyes",
+    "nextVisit": "2026-09-09",
+    "status": "COMPLETED",
+    "balance": 75
+  }
+]

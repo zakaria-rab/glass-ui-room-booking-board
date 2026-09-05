@@ -1,0 +1,22 @@
+{
+  "$schema": "https://openapi.vercel.sh/microfrontends.json",
+  "version": "1",
+  "applications": {
+    "glass-ui-framework": {
+      "development": {
+        "fallback": "glass-ui-framework.vercel.app"
+      }
+    },
+    "glass-ui-app1": {
+      "routing": [
+        {
+          "group": "apps",
+          "paths": [
+            "/apps/app1",
+            "/apps/app1/:path*"
+          ]
+        }
+      ]
+    }
+  }
+}

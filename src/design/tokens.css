@@ -1,0 +1,145 @@
+/* ═══════════════════════════════════════════════════════════
+   Overjet design tokens.
+
+   Copied verbatim from docs/design/styles.css (everything above its
+   "Base" banner), whose token blocks are in turn copied verbatim from
+   the Overjet Design System project:
+   https://claude.ai/design/p/7542d71d-ff17-4ce1-88b0-304e907bc8bb
+
+   Do not hand-edit these values. Re-copy them from source. If a token
+   is missing, add it here with a comment citing the source — never
+   inline a literal in a component stylesheet.
+
+   One documented edit: the fonts.css `@import` of Inter from
+   fonts.googleapis.com is commented out because Inter is self-hosted by
+   next/font/google in src/app/layout.tsx. src/app/globals.css points
+   --font-sans at the family next/font generates, keeping the same
+   fallback stack.
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── tokens/fonts.css ─────────────────────────────────────── */
+/* Replaced by next/font/google — see src/app/layout.tsx.
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..800;1,14..32,300..800&display=swap'); */
+
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', sans-serif;
+  --font-mono: 'SF Mono', ui-monospace, Menlo, monospace;
+}
+
+/* ── tokens/colors.css ───────────────────────────────────── */
+:root {
+  /* Brand violet ramp (anchored on #5100FE) */
+  --v50:  #F4EFFF;
+  --v100: #E7DBFF;
+  --v200: #D4C1FF;
+  --v300: #B18EFF;
+  --v400: #8F5CFF;
+  --v500: #7433FF;
+  --v600: #5100FE;  /* the only brand primary */
+  --v700: #4400D6;  /* primary hover */
+  --v900: #1F0061;
+
+  /* Warm stone neutrals (NOT cool gray) */
+  --s50:  #FAFAF9;
+  --s100: #F5F5F4;
+  --s200: #E7E5E4;
+  --s300: #D6D3D1;
+  --s400: #A8A29E;
+  --s500: #78716C;
+  --s600: #57534E;
+  --s700: #44403C;
+  --s800: #292524;
+  --s900: #1C1917;
+
+  --ok: #16A34A; --ok-bg: #F0FDF4; --ok-br: #BBF7D0;
+  --wa: #D97706; --wa-bg: #FFFBEB; --wa-br: #FDE68A;
+  --er: #DC2626; --er-bg: #FEF2F2; --er-br: #FECACA;
+  --in: #2563EB; --in-bg: #EFF6FF; --in-br: #BFDBFE;
+}
+
+/* ── tokens/semantic.css ─────────────────────────────────── */
+:root {
+  --canvas: #F9F7F5;
+  --canvas-flat: #F9F7F5;
+
+  --surface-card:   #FFFFFF;
+  --surface-glass:  rgba(255,255,255,0.82);
+  --surface-subtle: #F4F1EC;
+  --surface-hover:  #EFEBE4;
+
+  --text:   #1C1917;
+  --text-2: #57534E;
+  --text-3: #A8A29E;
+  --text-on-brand: #FFFFFF;
+
+  --brand:       var(--v600);
+  --brand-hover: var(--v700);
+  --brand-soft:  var(--v50);
+  --brand-grad:       linear-gradient(135deg, var(--v600), var(--v500));
+  --brand-grad-hover: linear-gradient(135deg, var(--v700), var(--v600));
+
+  --border:        rgba(15,10,40,.08);
+  --border-input:  #E7E5E4;
+  --border-strong: #D6D3D1;
+
+  --ring: 0 0 0 3px rgba(81,0,254,.20);
+}
+
+/* ── tokens/typography.css ───────────────────────────────── */
+:root {
+  --t-display-size: 38px; --t-display-weight: 700; --t-display-ls: -1px;
+  --t-title-size:   26px; --t-title-weight:   720; --t-title-ls:   -.6px;
+  --t-section-size: 20px; --t-section-weight: 650; --t-section-ls: -.4px;
+  --t-sub-size:     17px; --t-sub-weight:     600; --t-sub-ls:     -.3px;
+  --t-body-size:    15px; --t-body-weight:    400; --t-body-ls:    0;
+  --t-secondary-size: 13px; --t-secondary-weight: 400; --t-secondary-ls: 0;
+  --t-label-size:   11px; --t-label-weight:   600; --t-label-ls:   .05em;
+
+  --leading-tight: 1.2;
+  --leading-snug:  1.45;
+  --leading-body:  1.65;
+  --leading-loose: 1.85;
+
+  --nums-tabular: tabular-nums;
+}
+
+/* ── tokens/spacing.css ──────────────────────────────────── */
+:root {
+  --sp-1: 4px;  --sp-2: 8px;   --sp-3: 12px; --sp-4: 16px;
+  --sp-5: 20px; --sp-6: 24px;  --sp-8: 32px; --sp-10: 40px;
+  --sp-12: 48px; --sp-16: 64px; --sp-20: 80px; --sp-24: 96px;
+}
+
+/* ── tokens/radius.css ───────────────────────────────────── */
+:root {
+  --r-xs: 4px; --r-sm: 6px; --r-md: 8px; --r-lg: 12px;
+  --r-xl: 16px; --r-2xl: 24px; --r-full: 9999px;
+}
+
+/* ── tokens/elevation.css ────────────────────────────────── */
+:root {
+  --sh-xs: 0 1px 2px rgba(15,10,40,.04);
+  --sh-sm: 0 1px 4px rgba(15,10,40,.06), 0 1px 2px rgba(15,10,40,.04);
+  --sh-md: 0 4px 16px rgba(15,10,40,.08), 0 1px 4px rgba(15,10,40,.04);
+  --sh-lg: 0 8px 32px rgba(15,10,40,.10), 0 2px 8px rgba(15,10,40,.06);
+  --sh-xl: 0 16px 48px rgba(15,10,40,.12), 0 4px 16px rgba(15,10,40,.06);
+  --sh-brand:    0 2px 8px rgba(81,0,254,.28);
+  --sh-brand-lg: 0 4px 14px rgba(81,0,254,.38);
+}
+
+/* ── tokens/motion.css ───────────────────────────────────── */
+:root {
+  --tx:       200ms cubic-bezier(0.16, 1, 0.3, 1);
+  --tx-fast:  120ms cubic-bezier(0.16, 1, 0.3, 1);
+  --tx-slow:  400ms cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --lift:   translateY(-1px);
+  --lift-2: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}

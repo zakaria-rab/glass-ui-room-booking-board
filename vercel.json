@@ -1,0 +1,5 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "buildCommand": "vercel microfrontends pull || echo 'no group yet; using the committed microfrontends.json'; next build"
+}

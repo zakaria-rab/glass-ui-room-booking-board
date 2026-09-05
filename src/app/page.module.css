@@ -1,0 +1,106 @@
+.page {
+  min-height: 100vh;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: color-mix(in srgb, var(--canvas) 72%, transparent);
+  backdrop-filter: blur(12px);
+  letter-spacing: -0.01em;
+}
+
+.count {
+  color: var(--text-2);
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--surface-card);
+  border-radius: var(--r-lg);
+  padding: 20px;
+  box-shadow:
+    0 1px 2px rgb(24 24 27 / 0.06),
+    0 8px 24px rgb(24 24 27 / 0.06);
+}
+
+.card h2 {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 8px;
+}
+
+.primary {
+  background: var(--brand);
+  color: var(--text-on-brand);
+  font-weight: 500;
+}
+
+.primary:hover {
+  background: color-mix(in oklab, var(--brand) 88%, black);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--text-2);
+}
+
+.ghost:hover {
+  background: var(--canvas);
+  color: var(--er);
+}
+
+.error {
+  margin-top: 12px;
+  color: var(--er);
+  font-size: 14px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.table th {
+  text-align: left;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-2);
+  padding-bottom: 8px;
+}
+
+.table td {
+  padding: 8px 12px 8px 0;
+  border-top: 1px solid var(--border);
+}
+
+.table th:not(:last-child) {
+  padding-right: 12px;
+}
+
+.num {
+  text-align: right;
+}
