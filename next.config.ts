@@ -20,6 +20,14 @@ import type { NextConfig } from "next";
  * `/apps/<slug>/*` and this app answers on those paths through the group.
  * Still no `X-Frame-Options` or `frame-ancestors` — the shell embeds this app.
  */
-const nextConfig: NextConfig = {};
+const nextConfig: NextConfig = {
+  /**
+   * Microfrontends forwards the matched path to this app unchanged — it does
+   * not strip the prefix. So an app routed at /apps/<slug> must actually serve
+   * /apps/<slug>, and without this it answers 404 for every request that
+   * arrives through the group while working perfectly at its own URL.
+   */
+  basePath: "/apps/room-booking-board",
+};
 
 export default withMicrofrontends(nextConfig);
