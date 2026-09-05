@@ -18,7 +18,7 @@ import { PatientsView } from "./patients-view";
 const NOT_DEPLOYED = "local";
 const NO_GIT_METADATA = "uploaded";
 
-/** Which deployment you are looking at. Kept from the template's Hello World. */
+/** Which deployment you are looking at. Kept from the template's Room booking board. */
 function Deployment() {
   const deployed = Boolean(process.env.VERCEL_ENV);
   const unknown = deployed ? NO_GIT_METADATA : NOT_DEPLOYED;
