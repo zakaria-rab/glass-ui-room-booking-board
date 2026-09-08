@@ -1,3 +1,5 @@
+import { appPath } from "./base-path";
+
 /**
  * The only way data enters this app.
  *
@@ -16,7 +18,13 @@
  * Callers cannot tell the difference and should not care.
  */
 
-const GRAPHQL_PATH = "/api/graphql";
+/**
+ * Prefixed, because `fetch` knows nothing about `basePath`. Unprefixed, this
+ * request leaves the app entirely: the microfrontends group forwards a path
+ * this app has not claimed to the default application, so it reaches the
+ * shell's schema and fails with `Unknown type "NewPatient"`.
+ */
+const GRAPHQL_PATH = appPath("/api/graphql");
 
 interface GraphQLResponse<T> {
   data?: T;
